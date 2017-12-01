@@ -33,6 +33,6 @@ def new_topic(request):
         form = TopicForm(data=request.POST)
         if form.is_valid():
             form.save
-            return HttpResponseRedirect(reverse('Journal:topic'))
+            return HttpResponseRedirect(reverse('Journal:topics'))
     context = {'form': form}
     return render(request, 'new_topic.html', context)
