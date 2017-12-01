@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.urls import reverse
 
 from .models import Topic
+from .forms import TopicForm
 
 # Create your views here.
 def index(request):
@@ -22,3 +25,14 @@ def topic(request, topic_id):
     context = {'topic':topic, 'entries': entries}
     return render(request, 'topic.html', context)
 
+def new_topic(request):
+    #Adds a new topic
+    if request.method != 'POST':
+        form = TopicForm()
+    else:
+        form = TopicForm(data=request.POST)
+        if form.is_valid():
+            form.save
+            return HttpResponseRedirect(reverse('Journal:topic'))
+    context = {'form': form}
+    return render(request, 'new_topic.html', context)
