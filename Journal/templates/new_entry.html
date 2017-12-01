@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p><a href="{% url 'Journal:topic' topic.id %}">{{ topic }}</a></p>
+
+    <p>Add a New Entry</p>
+    <form action="{% url 'Journal:new_entry' topic.id %}" method="post">
+{#        Django security tag that will prevent unauthorized access through the form#}
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">Add Entry</button>
+    </form>
+{% endblock content %}
