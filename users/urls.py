@@ -8,6 +8,6 @@ urlpatterns = [
     #URL config for logging in
     url('^login/$', login, {'template_name':'login.html'}, name='login'),
     #URL config for logging out
-    url(r'^logout/$', views.logout, name='logout'),
+    url(r'^logout/$', views.logout_view, name='logout'),
 
 ]

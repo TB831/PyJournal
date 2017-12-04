@@ -9,6 +9,6 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth import logout
 
 # Create your views here.
-def logout(request):
+def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse('Journal:index'))
