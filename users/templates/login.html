@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if forms.errors %}
+        <p>Incorrect login credentials. Please Try Again</p>
+
+        <form method="post" action="{% url 'users:login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button name="submit">Log In!</button>
+
+        <input type="hidden" name="text" value="{% url 'Journal:index' %}"/>
+        </form>
+    {% endif %}
+{% endblock content %}
