@@ -9,5 +9,6 @@ urlpatterns = [
     url('^login/$', login, {'template_name':'login.html'}, name='login'),
     #URL config for logging out
     url(r'^logout/$', views.logout_view, name='logout'),
-
+    #URL config for registration
+    url(r'^register/', views.register, name='register'),
 ]
