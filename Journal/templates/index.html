@@ -1,11 +1,12 @@
 {% extends "base.html" %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>PyJournal</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
-</html>
+{% load bootstrap3 %}
+{% block header %}
+
+    <div class="jumbotron">
+      <h1>Welcome to PyBlog!</h1>
+      <p>Sign up for an account to access topics and entries!</p>
+        <p>Once signed up you can then add topics and entries to talk about just like forums</p>
+      <p><a class="btn btn-primary btn-lg" href="{% url 'users:register' %}" role="button">Sign up!</a></p>
+    </div>
+
+{% endblock header %}
