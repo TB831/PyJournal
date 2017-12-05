@@ -17,4 +17,7 @@ urlpatterns = [
 
     #Page that allows users to add a new entry
     url(r'^new_entry/(?P<topic_id>\d+)/$', views.new_entry, name='new_entry'),
+
+    #URL config that allows edit of entries
+    url(r'edit_entry/(?P<edit_id)>\d+/$', views.edit_entry, name='edit_entry')
 ]
