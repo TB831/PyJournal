@@ -1,24 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>Topic: {{ topic }}</p>
-    <p>Entries</p>
-    <p>
-        <a href="{% url 'Journal:new_entry' topic.id %}">Add New Entry</a>
-    </p>
+    <div class="page-header">
+      <h1>Current Topic <small>{{ topic }}</small></h1>
+    </div>
+
+    <h2>Entries</h2>
+    <ul class="nav nav-pills">
+        <li class="presentation"><a href="{% url 'Journal:new_entry' topic.id %}">Add New Entry</a></li>
+    </ul>
+
     <ul>
         {% for entry in entries %}
-            <li>
-                <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
-                <p>{{ entry.text|linebreaks }}</p>
-                <p>
-                    <a href="{% url 'Journal:edit_entry' entry.id %}">Edit Entry!</a>
-                </p>
-            </li>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>{{ entry.date_added|date:'M d, Y H:i' }}
+                        <small><a href="{% url 'Journal:edit_entry' entry.id %}">Edit Entry!</a></small>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    {{ entry.text|linebreaks }}
+                </div>
+            </div>
         {% empty %}
-            <li>
-                There are not entries for this topic yet.
-            </li>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>There no entries for this topic</h3>
+                </div>
+            </div>
         {% endfor %}
     </ul>
 {% endblock content %}

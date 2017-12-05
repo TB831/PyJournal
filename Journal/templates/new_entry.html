@@ -1,13 +1,20 @@
 {% extends "base.html" %}
+{% load bootstrap3 %}
 
 {% block content %}
-    <p><a href="{% url 'Journal:topic' topic.id %}">{{ topic }}</a></p>
+    <p><a href="{% url 'Journal:topic' topic.id %}">Click here to go back</a></p>
 
-    <p>Add a New Entry</p>
+    <div class="page-header">
+      <h1>New Entry</h1>
+    </div>
     <form action="{% url 'Journal:new_entry' topic.id %}" method="post">
 {#        Django security tag that will prevent unauthorized access through the form#}
         {% csrf_token %}
         {{ form.as_p }}
-        <button name="submit">Add Entry</button>
+
+        {% buttons %}
+            <button name="submit" class="btn btn-primary">Add New Topic</button>
+        {% endbuttons %}
+{#        <button name="submit">Add Entry</button>#}
     </form>
 {% endblock content %}
