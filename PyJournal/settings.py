@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'bootstrap3',
+
     #Setup for the different apps
     'Journal',
     'users',
@@ -125,3 +127,7 @@ LOGIN_REDIRECT_URL = 'Journal:index'
 STATIC_URL = '/static/'
 
 LOGIN_URL = '/users/login'
+
+BOOTSTRAP3 = {
+    'include_jquery': True
+}

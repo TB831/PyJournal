@@ -1,14 +1,53 @@
-<p>
-    <a href="{% url 'Journal:index' %}">Journal</a>
-    <a href="{% url 'Journal:topics' %}">Topics</a>
-    {% if user.is_authenticated %}
-        Hello, {{ user.username }}.
-        <a href="{% url 'users:logout' %}">Log me out!</a>
-    {% else %}
-        <a href="{% url 'users:register' %}">Register</a>
-        <a href="{% url 'users:login' %}">Log me in!</a>
-    {% endif %}
-</p>
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PyBlog!</title>
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <img alt="Brand" src="https://jinbaskom.files.wordpress.com/2015/05/text-x-python-icon1.png?w=30&h=25">
+              </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="{% url 'Journal:index' %}">Home</a></li>
+                  <li><a href="{% url 'Journal:topics' %}">Topics</a></li>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  {% if user.is_authenticated %}
+                      <li class="navbar-text"><strong>Hello, {{ user.username }}</strong></li>
+                      <li><a href="{% url 'users:logout' %}">Log me out!</a></li>
+                  {% else %}
+                      <li><a href="{% url 'users:register' %}">Register</a></li>
+                      <li><a href="{% url 'users:login' %}">Log me in!</a></li>
+                  {% endif %}
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+    </body>
+
+{#<p>#}
+{#    <a href="{% url 'Journal:index' %}">Home</a>#}
+{#    <a href="{% url 'Journal:topics' %}">Topics</a>#}
+{#    {% if user.is_authenticated %}#}
+{#        Hello, {{ user.username }}.#}
+{#        <a href="{% url 'users:logout' %}">Log me out!</a>#}
+{#    {% else %}#}
+{#        <a href="{% url 'users:register' %}">Register</a>#}
+{#        <a href="{% url 'users:login' %}">Log me in!</a>#}
+{#    {% endif %}#}
+{#</p>#}
 
 {% block content %}
 
