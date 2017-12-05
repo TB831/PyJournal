@@ -1,10 +1,14 @@
 {% extends "base.html" %}
+{% load bootstrap3 %}
 
 {% block content %}
-    <form method="post" action="{% url 'users:register' %}">
+    <form method="post" action="{% url 'users:register' %}" class="form">
         {% csrf_token %}
-        {{ form.as_p }}
-    <button name="submit">Register!</button>
+        {% bootstrap_form form %}
+{#        {{ form.as_p }}#}
+    {% buttons %}
+         <button name="submit" class="btn btn-primary">Register!</button>
+    {% endbuttons %}
     <input type="hidden" name="next" value="{% url 'Journal:index' %}">
     </form>
 {% endblock content %}
