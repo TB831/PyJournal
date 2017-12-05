@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feeb409c-94b4-44f4-98b9-ff4aaec5f357" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Journal/urls.py" afterPath="$PROJECT_DIR$/Journal/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Journal/views.py" afterPath="$PROJECT_DIR$/Journal/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Journal/templates/edit_entry.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Journal/templates/topic.html" afterPath="$PROJECT_DIR$/Journal/templates/topic.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,14 +67,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Journal/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="460">
-                  <caret line="76" column="60" lean-forward="true" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
+                <state relative-caret-position="325">
+                  <caret line="71" column="59" lean-forward="true" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
                   <folding>
                     <element signature="e#24#63#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="edit_entry.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Journal/templates/edit_entry.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -124,7 +135,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Journal/templates/base.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="210">
@@ -137,18 +148,18 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Journal/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+                <state relative-caret-position="150">
+                  <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="topic.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="topic.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Journal/templates/topic.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="81" lean-forward="false" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
                   <folding />
                 </state>
               </provider>
@@ -179,7 +190,6 @@
         <option value="$PROJECT_DIR$/Journal/templates/topics.html" />
         <option value="$PROJECT_DIR$/Journal/templates/new_topic.html" />
         <option value="$PROJECT_DIR$/Journal/forms.py" />
-        <option value="$PROJECT_DIR$/Journal/templates/topic.html" />
         <option value="$PROJECT_DIR$/Journal/templates/new_entry.html" />
         <option value="$PROJECT_DIR$/PyJournal/urls.py" />
         <option value="$PROJECT_DIR$/Journal/templates/base.html" />
@@ -191,6 +201,8 @@
         <option value="$PROJECT_DIR$/PyJournal/settings.py" />
         <option value="$PROJECT_DIR$/Journal/urls.py" />
         <option value="$PROJECT_DIR$/Journal/views.py" />
+        <option value="$PROJECT_DIR$/Journal/templates/edit_entry.html" />
+        <option value="$PROJECT_DIR$/Journal/templates/topic.html" />
       </list>
     </option>
   </component>
@@ -233,6 +245,12 @@
               <item name="PyJournal" type="b2602c69:ProjectViewProjectNode" />
               <item name="PyJournal" type="462c0819:PsiDirectoryNode" />
               <item name="Journal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PyJournal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PyJournal" type="462c0819:PsiDirectoryNode" />
+              <item name="Journal" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PyJournal" type="b2602c69:ProjectViewProjectNode" />
@@ -379,14 +397,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PyJournal/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PyJournal/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -592,14 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Journal/templates/topic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Journal/templates/new_topic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -675,14 +677,6 @@
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Journal/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,11 +778,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Journal/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="76" column="60" lean-forward="true" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
+        <state relative-caret-position="325">
+          <caret line="71" column="59" lean-forward="true" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Journal/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Journal/templates/edit_entry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Journal/templates/topic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="81" lean-forward="false" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
