@@ -1,17 +1,21 @@
 {% extends "base.html" %}
+{% load bootstrap3 %}
 
 {% block content %}
-    <p>Topics</p>
+    <h2>Topics</h2>
 
-    <ul>
+    <ul class="list-group">
         {% for topic in topics %}
-            <li>
+            <li class="list-group-item" bg-primary>
                 <a href="{% url 'Journal:topic' topic.id %}">{{ topic }}</a>
             </li>
         {% empty %}
-            <li>No Topics have been added yet</li>
+            <li role="presentation">No Topics have been added yet</li>
         {% endfor %}
     </ul>
 
-    <a href="{% url 'Journal:new_topic' %}">Add a New Topic</a>
+    <ul class="nav nav-pills">
+        <li class="presentation"><a href="{% url 'Journal:new_topic' %}">Add a New Topic</a></li>
+    </ul>
+
 {% endblock content %}
