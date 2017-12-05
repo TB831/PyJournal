@@ -123,3 +123,5 @@ LOGIN_REDIRECT_URL = 'Journal:index'
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_URL = '/users/login'
