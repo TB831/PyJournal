@@ -1,6 +1,13 @@
 <p>
     <a href="{% url 'Journal:index' %}">Journal</a>
     <a href="{% url 'Journal:topics' %}">Topics</a>
+    {% if user.is_authenticated %}
+        Hello, {{ user.username }}.
+        <a href="{% url 'users:logout' %}">Log me out!</a>
+    {% else %}
+        <a href="{% url 'users:register' %}">Register</a>
+        <a href="{% url 'users:login' %}">Log me in!</a>
+    {% endif %}
 </p>
 
 {% block content %}
