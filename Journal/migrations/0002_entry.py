@@ -20,6 +20,7 @@ class Migration(migrations.Migration):
                 ('text', models.TextField()),
                 ('date_added', models.DateTimeField(auto_now=True)),
                 ('topic', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Journal.Topic')),
+                ('picture', models.FileField()),
             ],
             options={
                 'verbose_name_plural': 'entries',

@@ -18,7 +18,7 @@ class Entry(models.Model):
     topic = models.ForeignKey(Topic)
     text = models.TextField()
     date_added = models.DateTimeField(auto_now=True)
-
+    image = models.FileField(null=True, blank=True)
     class Meta:
         verbose_name_plural = 'entries'
 
